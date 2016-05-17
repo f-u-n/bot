@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/f-u-n/fun-bot/issues"
   },
-  "homepage": "https://github.com/f-u-n/fun-bot#readme"
+  "homepage": "https://github.com/f-u-n/fun-bot#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "node-gitter": "^1.2.11"
+  }
 }
