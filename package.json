@@ -1,0 +1,24 @@
+{
+  "name": "fun-bot",
+  "version": "1.0.0",
+  "description": "a gitter bot that likes to have fun",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f-u-n/fun-bot.git"
+  },
+  "keywords": [
+    "gitter",
+    "bot",
+    "fun"
+  ],
+  "author": "Brian J Dixon (bjdixon)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f-u-n/fun-bot/issues"
+  },
+  "homepage": "https://github.com/f-u-n/fun-bot#readme"
+}
