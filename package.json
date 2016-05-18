@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/f-u-n/fun-bot.git"
+    "url": "git+https://github.com/f-u-n/bot.git"
   },
   "keywords": [
     "gitter",
@@ -18,9 +18,9 @@
   "author": "Brian J Dixon (bjdixon)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/f-u-n/fun-bot/issues"
+    "url": "https://github.com/f-u-n/bot/issues"
   },
-  "homepage": "https://github.com/f-u-n/fun-bot#readme",
+  "homepage": "https://github.com/f-u-n/bot#readme",
   "dependencies": {
     "express": "^4.13.4",
     "node-gitter": "^1.2.11"
