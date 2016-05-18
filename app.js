@@ -1,8 +1,8 @@
 'use strict'
 
 const Gitter = require('node-gitter')
-
 const gitter = new Gitter('token')
+const botName = 'fun-bot'
 const roomName = 'bjdixon/fun-bot-test'
 
 gitter.currentUser()
@@ -13,11 +13,10 @@ gitter.currentUser()
         console.log('Joined room: ', room.name)
         room.send('Hello world!')
         let events = room.streaming().chatMessages()
-
-        // The 'chatMessages' event is emitted on each new message
         events.on('chatMessages', (message) => {
-          console.log('A message was ' + message.operation)
-          console.log('Text: ', message.model.text)
+          if (message.model.mentions && message.model.mentions.filter(m => m.screenName === botName).length) {
+            console.log(`${botName} was mentioned`)
+          }
         })
       })
       .fail((err) => console.log('Not possible to join the room: ', err))
