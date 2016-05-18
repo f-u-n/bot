@@ -2,6 +2,7 @@
 
 const Gitter = require('node-gitter')
 const gitter = new Gitter('token')
+const handleCommands = require('./lib/handleCommands')
 const botName = 'fun-bot'
 const roomName = 'bjdixon/fun-bot-test'
 
@@ -14,8 +15,9 @@ gitter.currentUser()
         room.send('Hello world!')
         let events = room.streaming().chatMessages()
         events.on('chatMessages', (message) => {
-          if (message.model.mentions && message.model.mentions.filter(m => m.screenName === botName).length) {
+          if (message.model.mentions && message.model.mentions.filter(m => m.screenName === botName).length && message.model.fromUser.username !== botName) {
             console.log(`${botName} was mentioned`)
+            room.send(handleCommands(message.model.text, message.model.fromUser.username))
           }
         })
       })
