@@ -12,11 +12,9 @@ gitter.currentUser()
     gitter.rooms.join(roomName)
       .then((room) => {
         console.log('Joined room: ', room.name)
-        room.send('Hello world!')
         let events = room.streaming().chatMessages()
         events.on('chatMessages', (message) => {
           if (message.model.mentions && message.model.mentions.filter(m => m.screenName === botName).length && message.model.fromUser.username !== botName) {
-            console.log(`${botName} was mentioned`)
             room.send(handleCommands(message.model.text, message.model.fromUser.username))
           }
         })
