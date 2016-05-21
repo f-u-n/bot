@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/f-u-n/bot#readme",
   "dependencies": {
-    "express": "^4.13.4",
     "node-gitter": "^1.2.11"
   }
 }
