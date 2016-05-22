@@ -1,7 +1,7 @@
 'use strict'
 
 const Gitter = require('node-gitter')
-const gitter = new Gitter('token')
+const gitter = new Gitter(process.env.gitterToken)
 const handleCommands = require('./lib/handleCommands')
 const botName = 'fun-bot'
 const roomName = 'bjdixon/fun-bot-test'
