@@ -4,7 +4,7 @@ const Gitter = require('node-gitter')
 const gitter = new Gitter(process.env.gitterToken)
 const handleCommands = require('./lib/handleCommands')
 const botName = 'fun-bot'
-const roomName = 'bjdixon/fun-bot-test'
+const roomName = 'f-u-n/playtime'
 
 gitter.currentUser()
   .then((user) => console.log('You are logged in as:', user.username))
